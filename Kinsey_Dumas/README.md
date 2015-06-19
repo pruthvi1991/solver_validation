@@ -4,7 +4,7 @@ These case files can replicate the kinematics of kinsey and dumas.
 
 2) Execute the ./run.sh file in the snappy_tutorial/ directory.
 
-3) Once the mesh is generated go to pitch_plunge_custom directoryand execute the ./run.sh file there.
+3) Once the mesh is generated go to pitch_plunge_custom/ directoryand execute the ./run.sh file there.
 
 The ./cleanCase.sh can be run to clean a directory.
 
