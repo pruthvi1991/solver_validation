@@ -1,6 +1,10 @@
-These case files can replicate the kinematics of kinsey and dumas. Compile the code in the twoDoscillatingDisplacement.
-Later execute the ./run.sh file in the snappy_tutorial/ directory. Once the mesh is generated go to pitch_plunge_custom directory
-and execute the ./run.sh file there.
+These case files can replicate the kinematics of kinsey and dumas. 
+
+1) Compile the code in the twoDoscillatingDisplacement.
+
+2) Execute the ./run.sh file in the snappy_tutorial/ directory.
+
+3) Once the mesh is generated go to pitch_plunge_custom directoryand execute the ./run.sh file there.
 
 The ./cleanCase.sh can be run to clean a directory.
 
