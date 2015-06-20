@@ -1,0 +1,55 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       pointVectorField;
+    location    "0.01";
+    object      pointDisplacement;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 0 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    wing
+    {
+        type            twoDOscillatingDisplacement;
+        axis            (0 0 1); // pitching axis
+        origin          (0.33333333 0 0); // elastic axis
+        angle0          0; // mean theta
+        amplitude       -0.69; //1.04719755; //1.24791042; // theta amplitude (rad +ve C.C.W)
+        omega           0.15079644474; // frequency for theta (rad/s)
+        value           uniform (0 0 0);
+        amplitudeH      (0 1 0); // H amplitude
+        omegaH          0.15079644474;   // H frequency
+    }
+
+    front
+    {
+        type            empty;
+    }
+
+    back
+    {
+        type            empty;
+    }
+
+    ".*"
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //
